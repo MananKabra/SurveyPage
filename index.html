@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        
+
+        .background-image{
+            position: absolute;
+            left:0;
+	        right:0;
+	        top:0;
+	        bottom:0;
+            background-image: url("https://images.pexels.com/photos/5117931/pexels-photo-5117931.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            filter: blur(2.5px) ;
+            z-index: 1;
+        }
+
+        #content{
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        #title{
+            font-family: monospace;
+            font-size: 5vmin;
+        }
+        
+        #description{
+            font-family: monospace;
+            font-size: 2.2vmin;
+        }
+
+        #form-container{
+            border-radius: 20px;
+            opacity: 0.8;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+            width: 80vw;
+            height: 100%;
+            background-color: antiquewhite;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+        #form-content{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding-top: 5vmin;
+            padding-left: 3vmin;
+        }
+
+        [type='text']{
+            margin-right: 8vmax;
+            width: 60vw;
+            height: 3vmax;
+            
+        }
+        
+        #elements{
+            font-size: 2vw;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #butt{
+            text-align: center;
+            width: 15vw;
+            height: 4vh;
+        }
+
+        #butt-container{
+            align-self: center;
+        }
+
+        #radio-butt{
+            display: flex;
+            flex-direction: column;
+            font-size: 3vmax;
+        }
+
+        #drop-down{
+            font-size: 3vw;
+            font-weight: bold;
+        }
+
+        #dropdwon-container{
+            display: flex;
+            flex-direction: column;
+        }
+
+        select{
+            width: 30vmax;
+        }
+        #comment-container{
+            font-size: 2vmax;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#">
+        <div>
+            <div class="background-image"></div>
+                <div id="content">
+                    <h1 id="title">Nature Survey Form</h1>
+                    <p id="description">Thanks for filling the form</p>
+                </div>
+                <br>
+                <div id="form-container">
+                    <div id="form-content">
+                        <div id="elements">
+                            <h2>Name : &nbsp;&nbsp;&nbsp;</h2>
+                            <input type="text">   
+                        </div>
+    
+                        <div id="elements">
+                            <h2>Email : &nbsp;&nbsp;</h2>
+                            <input type="text">
+                        </div>
+                        
+                        <div id="elements">
+                            <h2>Age  &nbsp;&nbsp;    : &nbsp;&nbsp;</h2>
+                            <input type="text">
+                        </div>
+                        
+                        <h2 style="font-size: 3vw;">
+                            How much would you be willing to donate for the climate?
+                        </h2>
+                        <div id="radio-butt">
+                        <label for="money">
+                            <input type="radio" name="money">10$
+                        </label>
+                        <label for="money">
+                            <input type="radio" name="money">20$
+                        </label>
+                        <label for="money">
+                            <input type="radio" name="money">50$
+                        </label>
+                        <label for="money">
+                            <input type="radio" name="money" checked>100$
+                        </label>
+                        </div>
+                        <br>
+
+                        <div id="radio-butt">
+                            <label for="money">
+                                <input type="checkbox" name="money">10$
+                            </label>
+                            <label for="money">
+                                <input type="checkbox" name="money">20$
+                            </label>
+                            <label for="money">
+                                <input type="checkbox" name="money">50$
+                            </label>
+                            <label for="money">
+                                <input type="checkbox" name="money" checked>100$
+                            </label>
+                            </div>
+                    
+                        <br>
+                        <div id="dropdown-container">
+                        <label id="drop-down" for="cars">Choose a payment method</label>
+                            <select name="cars" id="cars">
+                                <option value="upi">UPI</option>
+                                <option value="net-banking">Net Banking</option>
+                               <option value="card">Credit/Debit</option>
+                               <option value="cheque">Cheque</option>
+                               <option value="apple-pay">Apple Pay</option>
+                           </select>
+                        </div>
+                        <br>
+                        
+                        
+                        <div id="butt-container">
+                            <button id="butt" type="submit">Submit</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+        </div>
+    </form>
+    
+    
+        
+    
+        
+    
+</body>
+</html>
